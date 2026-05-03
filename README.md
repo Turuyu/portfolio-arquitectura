@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# 🏛️ Estudio Arquitectura — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page profesional para un estudio de arquitectura ficticio, diseñada como proyecto de portfolio para demostrar habilidades frontend.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Ver demo en vivo](#) _(próximamente)_
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Diseño responsive** — Adaptado para mobile, tablet y desktop
+- **Navbar sticky** — Navegación fija con efecto blur al scrollear
+- **Hero con CTA** — Sección principal con llamada a la acción clara
+- **Sección de servicios** — Cards con hover effects
+- **Galería de proyectos** — Grid con overlay animado
+- **Testimonios** — Sección de quotes de clientes
+- **Formulario de contacto** — Con validación y feedback visual
+- **Scroll reveal** — Animaciones de entrada al hacer scroll
+- **Contadores animados** — Stats que cuentan al entrar en viewport
 
-## Expanding the ESLint configuration
+## 🛠️ Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite** — Build tool y dev server
+- **React 18** — UI library
+- **TypeScript** — Type safety
+- **CSS Modules** — Scoped styling sin conflictos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Turuyu/portfolio-arquitectura.git
+cd portfolio-arquitectura
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El servidor corre en `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗️ Estructura
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Navbar.tsx          # Navegación sticky
+│   ├── Hero.tsx            # Sección principal
+│   ├── Stats.tsx           # Contadores animados
+│   ├── Services.tsx        # Cards de servicios
+│   ├── Projects.tsx        # Galería de proyectos
+│   ├── Testimonials.tsx    # Testimonios de clientes
+│   ├── Contact.tsx         # Formulario de contacto
+│   ├── Footer.tsx          # Footer
+│   └── ScrollReveal.tsx    # Animaciones de scroll
+├── App.tsx
+├── App.css                 # Variables CSS globales
+└── index.css               # Reset y base
+```
+
+## 📸 Screenshots
+
+_(Agregar screenshots del proyecto)_
+
+## 📝 License
+
+MIT
